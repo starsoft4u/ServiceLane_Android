@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.servicelane.myservicelane"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 6
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file('/Volumes/RAPTOR/raptors_workspace/Android/ServiceLane/KeyStore/ServiceLane.jks')
+            storePassword System.getenv('servicelane')
+            keyAlias = 'Service Lane'
+            keyPassword System.getenv('servicelane')
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation 'com.android.support:support-v4:28.0.0-rc01'
+    implementation 'com.android.support:design:28.0.0-rc01'
+    implementation 'com.android.support:gridlayout-v7:28.0.0-rc01'
+    implementation 'com.android.support:exifinterface:28.0.0-rc01'
+    implementation 'com.android.support:customtabs:28.0.0-rc01'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.facebook.fresco:fresco:1.10.0'
+    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'net.alhazmy13.Gota:libary:1.4.1'
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.github.Kennyc1012:MultiStateView:1.3.2'
+    implementation 'io.apptik.widget:multiselectspinner:1.0.12'
+    implementation 'com.annimon:stream:1.2.0'
+    implementation 'com.amitshekhar.android:android-networking:1.0.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.facebook.android:facebook-login:4.35.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

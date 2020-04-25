@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.HomeFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/spacer_dot"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:showDividers="middle">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/profilePanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hello"
+                        android:textAppearance="@style/Text.Bold1"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textAppearance="@style/Text"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:clickable="false"
+                        android:isIndicator="true"
+                        android:minWidth="16dp"
+                        android:minHeight="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textName"
+                        app:layout_constraintStart_toEndOf="@+id/textName"
+                        app:layout_constraintTop_toTopOf="@+id/textName"
+                        app:mrb_fillBackgroundStars="true"
+                        app:mrb_progressTint="@color/yellow" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/avatar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/spacer"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:showDividers="middle">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/find_help_near_you"
+                        android:textAppearance="@style/Text.Bold1"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/textProviders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Text"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:id="@+id/topCategoryPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/spacer"
+                        android:showDividers="middle">
+
+                        <Button
+                            android:id="@+id/btnCat0"
+                            style="@style/NoPaddingButton"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_blue"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:textAppearance="@style/Text.Small" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:divider="@drawable/spacer"
+                            android:orientation="vertical"
+                            android:showDividers="middle">
+
+                            <Button
+                                android:id="@+id/btnCat1"
+                                style="@style/NoPaddingButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:background="@drawable/button_yellow"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textAppearance="@style/Text.Small" />
+
+                            <Button
+                                android:id="@+id/btnCat2"
+                                style="@style/NoPaddingButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:background="@drawable/button_orange"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textAppearance="@style/Text.Small" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:divider="@drawable/spacer"
+                            android:orientation="vertical"
+                            android:showDividers="middle">
+
+                            <Button
+                                android:id="@+id/btnCat3"
+                                style="@style/NoPaddingButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:background="@drawable/button_green"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textAppearance="@style/Text.Small" />
+
+                            <Button
+                                android:id="@+id/btnCat4"
+                                style="@style/NoPaddingButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:background="@drawable/button_sky"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textAppearance="@style/Text.Small" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_round"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:src="@drawable/ic_category"
+                            tools:ignore="ContentDescription" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/pickerCategory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:paddingStart="40dp"
+                            android:paddingLeft="40dp"
+                            android:paddingEnd="0dp"
+                            android:paddingRight="0dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:text="@string/featured_providers"
+                        android:textAppearance="@style/Text.Bold1"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/btnViewAll"
+                        style="@style/NoPaddingButton"
+                        android:layout_width="64dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/button_blue_s"
+                        android:text="@string/view_all"
+                        android:textAppearance="@style/Text.Bold"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

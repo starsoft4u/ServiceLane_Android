@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.explore.ExploreFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@drawable/spacer"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/spacer_small"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/select_parish_to_view_top_providers"
+                android:textAppearance="@style/Text.Bold" />
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/parishView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="3">
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_sky"
+                    android:gravity="center"
+                    android:text="St. Andrew"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_yellow"
+                    android:gravity="center"
+                    android:text="St. John"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_green_light"
+                    android:gravity="center"
+                    android:text="St. Patrick"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_blue"
+                    android:gravity="center"
+                    android:text="St. George"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_orange"
+                    android:gravity="center"
+                    android:text="St. Mark"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_red_light"
+                    android:gravity="center"
+                    android:text="St. Patrick"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_purple"
+                    android:gravity="center"
+                    android:text="Carriacou"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    style="@style/NoPaddingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/button_green"
+                    android:gravity="center"
+                    android:text="Petite Martinique"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Text.Small"
+                    app:layout_columnSpan="2"
+                    app:layout_columnWeight="1"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.GridLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textParish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAppearance="@style/Text.Bold1"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnViewAll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnViewAll"
+                    style="@style/NoPaddingButton"
+                    android:layout_width="64dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_blue_s"
+                    android:text="@string/view_all"
+                    android:textAppearance="@style/Text.Bold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+        <com.kennyc.view.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/stateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:msv_emptyView="@layout/layout_state"
+            app:msv_viewState="empty">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.kennyc.view.MultiStateView>
+
+    </LinearLayout>
+
+</FrameLayout>
